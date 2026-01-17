@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* UTILITIES */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.light-bg {
+    background: #f4f6f8;
+}
+
+h2, h3, h4 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: #0b1f33;
+    color: #fff;
+    font-size: 14px;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+/* HEADER */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+    color: #005ea2;
+}
+
+/* BUTTONS */
+.btn,
+.btn-primary {
+    padding: 10px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn {
+    border: 1px solid #005ea2;
+    color: #005ea2;
+}
+
+.btn-primary {
+    background: #005ea2;
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    background: #eef3f8;
+    padding: 80px 0;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ddd;
+}
+
+/* LIST */
+.bullet-list {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* FOOTER */
+.footer {
+    background: #0b1f33;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+
+/* CONTACT FORM */
+.contact-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* OFFICE SECTION */
+.section h4 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+    color: #0b1f33;
+}

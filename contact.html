@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | APT Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact APT Solutions for examination systems, evaluation solutions, data services, and educational technology engagements.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container">
+        <span>Email: info@aptsolutions.biz</span>
+        <span>Serving Universities Since 2011</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>APT Solutions</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="security.html">Security & Compliance</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html" class="active btn">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="hero">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+            For enquiries related to examination systems, evaluation services,
+            data solutions, or institutional engagements, please reach out to us.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+    <div class="container">
+
+        <h3>Enquiry Form</h3>
+        <p>
+            Please provide your details below. Our team will review your enquiry
+            and respond appropriately.
+        </p>
+        <p>
+            <strong>Note:</strong> Please complete the form to download our
+            detailed solutions brochure.
+        </p>
+
+
+        <form class="contact-form" method="post" action="#">
+            <input type="hidden" id="downloadIntent" name="downloadIntent" value="">
+
+            
+            <div class="form-group">
+                <label for="institution">Organization / Institution Name *</label>
+                <input type="text" id="institution" name="institution" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="designation">Designation *</label>
+                <input type="text" id="designation" name="designation" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Official Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Enquiry Details *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Submit Enquiry</button>
+        </form>
+
+    </div>
+</section>
+
+<!-- OFFICES -->
+<section class="section light-bg">
+    <div class="container">
+        <h3>Our Offices</h3>
+
+        <h4>Administrative Office</h4>
+        <p>
+            8, Commerce Centre,<br>
+            Vishweshwar Nagar, Off Aarey Road,<br>
+            Goregaon (East), Mumbai – 400063<br>
+            Email: info@aptsolutions.biz, aptsolutions1@gmail.com
+        </p>
+
+        <h4>Baroda Branch</h4>
+        <p>
+            1st Floor, Narsinhkrupa Building,<br>
+            Behind Bank of Baroda,<br>
+            Sardar Bhavan Lane, Vadodara<br>
+            Phone: +91-265-2430030
+        </p>
+
+        <h4>Ahmedabad Branch</h4>
+        <p>
+            FF/5, Century Bazar,<br>
+            Behind Ahmedabad Central Mall,<br>
+            Ambawadi Circle, Ambawadi,<br>
+            Ahmedabad
+        </p>
+
+        <h4>Pune Branch</h4>
+        <p>
+            1st Floor, Kataria Chamber,<br>
+            Behind Reliance Foot Print,<br>
+            ITI Road, Sanewadi, Aundh,<br>
+            Pune<br>
+            Phone: +91-20-25887835
+        </p>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <h4>APT Solutions</h4>
+            <p>Examination Technology & Services for Higher Education</p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Email: info@aptsolutions.biz</p>
+            <p>Phone: +91-XXXXXXXXXX</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2026 APT Solutions. All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+    // Check if user came for brochure download
+    const params = new URLSearchParams(window.location.search);
+    const downloadType = params.get("download");
+
+    if (downloadType) {
+        document.getElementById("downloadIntent").value = downloadType;
+    }
+
+    // Handle form submission
+    document.querySelector(".contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Basic validation already handled by HTML5 required fields
+        const intent = document.getElementById("downloadIntent").value;
+
+        // OPTIONAL: here you can later send form data to backend via fetch()
+
+        // Trigger download only if brochure was requested
+        if (intent === "brochure") {
+            const link = document.createElement("a");
+            link.href = "assets/docs/APT_Solutions_Brochure.pdf";
+            link.download = "APT_Solutions_Brochure.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Show confirmation
+        alert("Thank you for your enquiry. Our team will get back to you.");
+
+        // Reset form
+        this.reset();
+    });
+</script>
+
+
+</body>
+</html>
