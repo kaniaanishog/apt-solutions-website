@@ -176,3 +176,48 @@ p {
     margin-bottom: 8px;
     color: #0b1f33;
 }
+
+
+
+/* MOBILE HEADER FIX */
+@media (max-width: 768px) {
+
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-menu .btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .top-bar .container {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
